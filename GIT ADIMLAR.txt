@@ -1,0 +1,32 @@
+------------------------------------------------------PROJEYİ LOCALE ÇEKME VE DEĞİŞİKLİK YAPARAK PUSHLAMA--------------------------------------------
+
+-> Önce lokalimize uzak repoyu çekiyoruz. Çektiğimiz şey projenin tamamıdır. Bütün branchlerle vs. beraber gelir. Projeye cd ile giriyoruz.
+	$git clone <URL>
+-> Değişiklikler yapıldıktan sonra uzak repoya değişiklikleri pushlamak için (Başka bir branch'e yapılacak push işlemleri için)
+	$git push <pushlanacak_branch> <şuanki branch>
+-> Kullanıcı adı ve şifre ile direkt olarak o branche aktarılmış olur.
+->Eğer mevcut branch'te bir değişiklik yaptık ve oraya pushlamak istiyorsak;
+	$git push 
+
+----------------------------------------------------------------MERGE İŞLEMİ-------------------------------------------------------------------
+-> Var olan branchleri birleştirmek (merge) işlemi için ikisinin de unprotected branchler olması gerekmekte; Önce merge yapılması istenen branche geç
+	$git checkout <main_branch>
+-> Branchi güncelle
+	$git pull origin <main_branch>
+-> Merge yapılmak istenen branch' ile merge işlemi başlat
+	$git merge <new_branch>
+-> Localde birleşen branchleri uzak repoya commitle
+	$git add .
+	$git commit
+-> pushla
+	$git push origin main
+
+-----------------------------------------------------------------BRANCH İŞLEMİ------------------------------------------------------------------
+-> Git'te var olan branch'ten yeni bir branch oluşturmak için
+	$git checkout -b <new_branch>
+-> Bu yeni branch'i LOKALDE oluşturup o branch'e swap işlemi yapar. Bu branch'i uzak repoya pushlamak için;
+	$git push -u origin <new_branch>
+  
+
+
+
